@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a2530;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Orbitron', sans-serif;
+      color: #ecf0f1;
+    }
+    canvas {
+      border: 3px solid #3498db;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
+    }
+    /* Prevent scrolling and text selection */
+    html, body {
+      overflow: hidden;
+      user-select: none;
+    }
+    /* Loading message styles */
+    #loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      color: #3498db;
+      text-align: center;
+      text-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Loading Game...</div>
+  <script>
+    // Show loading message until game is ready
+    window.onload = function() {
+      document.getElementById('loading').style.display = 'none';
+    };
+  </script>
+  <script src="pong.js"></script>
+</body>
+</html>
